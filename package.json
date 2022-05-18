@@ -1,0 +1,38 @@
+{
+  "name": "challenge-ebytr-dev",
+  "version": "1.0.0",
+  "description": "Projejo de desafio técnico da blitz de carreira realizado na Trybe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arturbacilla/challenge-ebytr-dev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arturbacilla/challenge-ebytr-dev/issues"
+  },
+  "homepage": "https://github.com/arturbacilla/challenge-ebytr-dev#readme",
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "@testing-library/user-event": "^14.2.0",
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "jest": "^28.1.0",
+    "mocha": "^10.0.0",
+    "mysql2": "^2.3.3",
+    "nyc": "^15.1.0",
+    "sequelize": "^6.19.2",
+    "sequelize-cli": "^6.4.1"
+  },
+  "dependencies": {
+    "camelcase": "^6.3.0",
+    "http-status-codes": "^2.2.0",
+    "uuid": "^8.3.2"
+  }
+}
