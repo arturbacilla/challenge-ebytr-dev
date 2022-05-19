@@ -3,8 +3,9 @@ export interface INewTask {
 }
 
 export interface ITask extends INewTask {
-  id: number;
-  status: string;
-  updatedAt: string;
-  createdAt: string;
+  id?: number;
+  task: string;
+  status?: string;
+  updatedAt?: string;
+  createdAt?: string;
 }

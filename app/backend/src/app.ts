@@ -11,7 +11,7 @@ class App {
     this.config();
   }
 
-  private config():void {
+  private config(): void {
     const accessControl: express.RequestHandler = (_req, res, next) => {
       res.header('Access-Control-Allow-Origin', '*');
       res.header('Access-Control-Allow-Methods', 'GET,POST,DELETE,OPTIONS,PUT,PATCH');
@@ -23,12 +23,12 @@ class App {
     this.app.use(express.json());
     this.app.use(cors());
     this.app.post('/tasks', this.Tasks.new) // endpoint para adicionar tarefas
-    this.app.get('/tasks', this.Tasks.getAll) // endpoint pra listar todas as tasks
-    // this.app.patch('/tasks/:id') // atualizar a tarefa
-    // this.app.delete('/tasks/:id) // deletar a tarefa
+    this.app.get('/tasks', this.Tasks.getAll) // endpoint pra listar todas as task
+    this.app.patch('/tasks/:id', this.Tasks.update) // atualizar a tarefa
+    this.app.delete('/tasks/:id', this.Tasks.remove) // deletar a tarefa
   }
 
-  public start(PORT: string | number):void {
+  public start(PORT: string | number): void {
     this.app.listen(PORT, () => {
       console.log(`Backend running on port ${PORT} with CORS enabled`);
     });
