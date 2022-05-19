@@ -1,8 +1,10 @@
 import * as express from 'express';
 import * as cors from 'cors';
+import TasksController from './database/controllers/Tasks';
 
 class App {
   public app: express.Express;
+  private Tasks = new TasksController();
 
   constructor() {
     this.app = express();
@@ -20,6 +22,10 @@ class App {
     this.app.use(accessControl);
     this.app.use(express.json());
     this.app.use(cors());
+    this.app.post('/tasks', this.Tasks.new) // endpoint para adicionar tarefas
+    this.app.get('/tasks', this.Tasks.getAll) // endpoint pra listar todas as tasks
+    // this.app.patch('/tasks/:id') // atualizar a tarefa
+    // this.app.delete('/tasks/:id) // deletar a tarefa
   }
 
   public start(PORT: string | number):void {
