@@ -1,13 +1,12 @@
 {
   "compilerOptions": {
     "target": "es2019",
-    "lib": ["es6"],                                      
     "module": "commonjs",                                
+    "moduleResolution": "node",                          
     "sourceMap": true,                                   
     "outDir": "./build",                                 
     "rootDir": "./src",                                  
     "strict": true,                                      
-    "moduleResolution": "node",                          
     "baseUrl": ".",                                      
     "forceConsistentCasingInFileNames": true,            
     "resolveJsonModule": true,                           
@@ -18,7 +17,6 @@
     "paths": {
       "*": ["node_modules/*"]
     },
-    "allowJs": true,                                     
   },
   "include": ["src/**/*"],
   "exclude": ["src/tests"]                                 
